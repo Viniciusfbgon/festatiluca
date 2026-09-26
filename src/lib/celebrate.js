@@ -20,7 +20,7 @@ export async function celebrate(signal) {
   document.body.append(canvas);
   const rain = confetti.create(canvas, { resize: true });
   const options = {
-    colors: ["#FFFFFF", "#FFFFFF", "#BDBDBD", "#171717"],
+    colors: ["#3B82F6", "#F43F5E", "#FBBF24", "#22C55E", "#A855F7"],
     disableForReducedMotion: true,
     particleCount: 4,
     angle: 270,
