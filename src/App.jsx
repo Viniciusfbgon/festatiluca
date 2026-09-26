@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   AnimatePresence,
   MotionConfig,
@@ -23,10 +23,15 @@ export default function App() {
     }
   });
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (!open) return;
+    const controller = new AbortController();
+    celebrate(controller.signal).catch(() => {});
+    return () => controller.abort();
+  }, [open]);
   const close = useCallback(() => setOpen(false), []);
   function reveal() {
     setOpen(true);
-    if (!revealed) celebrate().catch(() => {});
     setRevealed(true);
     try {
       localStorage.setItem(party.storageKey, "true");

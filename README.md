@@ -70,7 +70,7 @@ Se mudar o nome do repositório, atualize `base` em `vite.config.js` e `siteUrl`
 
 ## Acessibilidade e validação
 
-Modal com `aria-modal`, título, fundo inerte, foco preso, restauração de foco, Escape e fechamento por clique fora. Formulário com rótulos e radios nativos. Foco visível e link para pular ao conteúdo. Com `prefers-reduced-motion`, o convite mantém fades e desliga zoom, movimento magnético, transições de deslocamento e confetes.
+Modal em preto e branco, com chuva de confetes monocromáticos a cada abertura. Ao fechar, a animação é interrompida e o canvas é removido. Inclui `aria-modal`, título, fundo inerte, foco preso, restauração de foco, Escape e fechamento por clique fora. Formulário com rótulos e radios nativos. Foco visível e link para pular ao conteúdo. Com `prefers-reduced-motion`, o convite mantém fades e desliga zoom, movimento magnético, transições de deslocamento e confetes.
 
 Auditoria Lighthouse mobile realizada no build de produção local em 26/09/2026: **91 em desempenho, 100 em acessibilidade, 100 em boas práticas e 100 em SEO**, com CLS 0. Os 9 testes automatizados cobrem agenda, WhatsApp, teclado do modal e persistência, inclusive quando o localStorage está bloqueado. A foto final só começa a carregar perto da seção, evitando disputar banda com o hero.
 
