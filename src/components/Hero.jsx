@@ -1,5 +1,5 @@
 import { m as motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { imageUrl, party, partyWeekday } from "../config.js";
 import Countdown from "./Countdown.jsx";
 import RevealButton from "./RevealButton.jsx";
@@ -86,9 +86,6 @@ export default function Hero({ revealed, onReveal }) {
           </p>
           <div className={s.heroActions}>
             <RevealButton revealed={revealed} onClick={onReveal} />
-            <span className={s.hint}>
-              <Sparkles size={13} />A noite começa com uma surpresa.
-            </span>
           </div>
           <Countdown />
         </motion.div>
