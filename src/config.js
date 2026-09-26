@@ -7,9 +7,10 @@ export const party = {
   timeLabel: "20h até 3h",
   timeZone: "America/Sao_Paulo",
   dressCode: "Do seu jeito",
-  venue: "A definir",
-  address: "O endereço será anunciado em breve.",
-  mapsUrl: "", // Cole o link do Google Maps quando o local estiver definido.
+  venue: "Tizé Bar e Butequim",
+  address: "Confira o endereço e a rota no mapa.",
+  mapsUrl:
+    "https://www.google.com/maps/place/Tiz%C3%A9+Bar+e+Butequim/@-19.9321468,-43.9447528,16z/data=!3m1!4b1!4m6!3m5!1s0xa69761f522c8cd:0xa74dd47571b25b33!8m2!3d-19.9321468!4d-43.9447528!16s%2Fg%2F1tflhgbj?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
   whatsappNumber: "5531975746400", // País + DDD + número, somente dígitos.
   siteUrl: "https://viniciusfbgon.github.io/festatiluca/",
   description:

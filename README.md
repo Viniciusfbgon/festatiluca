@@ -24,7 +24,7 @@ npm run preview
 Todas as informações estão em **`src/config.js`**: nomes, data, início e término, horário, dress code, local, endereço, mapa, telefone, textos e URL pública. Title, descrição e Open Graph são preenchidos a partir dessa configuração durante o build.
 
 - O evento começa em **26/09/2026 às 20h** e termina em **27/09/2026 às 3h**, no fuso de Brasília (`-03:00`).
-- O local permanece **A definir**. Preencha `venue`, `address` e `mapsUrl` quando souber. O mapa fica indisponível até existir um link real.
+- O local é **Tizé Bar e Butequim**, com o botão **Abrir no mapa** conectado ao Google Maps. Edite `venue`, `address` e `mapsUrl` para atualizar essas informações.
 - Confirmações são direcionadas a **+55 (31) 97574-6400**. `whatsappNumber` recebe país + DDD + número, somente dígitos.
 - O convidado precisa enviar a mensagem no WhatsApp para concluir a confirmação. O site não coleta nem armazena nomes; não há backend.
 - O dress code sugerido é **Do seu jeito**; altere no arquivo se preferir.

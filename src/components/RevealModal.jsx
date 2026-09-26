@@ -33,11 +33,9 @@ export default function RevealModal({ onClose }) {
         onClose();
       }
       if (event.key !== "Tab") return;
-      const elements = [
-        ...dialog.current.querySelectorAll(
-          'button:not(:disabled), a[href], input:not(:disabled), [tabindex="0"]',
-        ),
-      ];
+      const elements = [...dialog.current.querySelectorAll("*")].filter(
+        (element) => element.tabIndex >= 0 && !element.disabled,
+      );
       const first = elements[0],
         last = elements.at(-1);
       if (
