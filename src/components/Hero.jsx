@@ -75,6 +75,7 @@ export default function Hero({ revealed, onReveal }) {
           ))}
         </h1>
         <motion.div
+          className={s.heroDetails}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
