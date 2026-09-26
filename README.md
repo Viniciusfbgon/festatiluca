@@ -66,6 +66,8 @@ A foto do hero tem prioridade de carregamento; as outras usam lazy loading. As f
 
 O workflow `.github/workflows/deploy.yml` roda a cada push em `main` (ou manualmente), executa `npm ci`, testes, `npm run build`, envia `dist` com `actions/upload-pages-artifact` e publica com `actions/deploy-pages`. Commit o `package-lock.json` junto do projeto.
 
+**Tela branca no Pages:** a origem precisa ser **GitHub Actions**, não **Deploy from a branch → main**. A publicação direta da branch serve o `index.html` de desenvolvimento, que depende da compilação do Vite. O workflow verifica essa configuração antes de publicar. Se a verificação falhar, altere a origem em Settings → Pages e use **Actions → Publicar convite no GitHub Pages → Run workflow**.
+
 Se mudar o nome do repositório, atualize `base` em `vite.config.js` e `siteUrl` em `src/config.js`. O `og:image` usa uma URL absoluta para a foto do hero. O WhatsApp pode manter em cache a primeira prévia compartilhada.
 
 ## Acessibilidade e validação

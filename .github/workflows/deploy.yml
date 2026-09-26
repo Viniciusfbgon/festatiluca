@@ -18,6 +18,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Verificar a origem de publicação do Pages
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pages } = await github.rest.repos.getPages(context.repo);
+            if (pages.build_type !== 'workflow') {
+              core.setFailed(
+                'O Pages está publicando diretamente uma branch, o que serve o HTML sem compilar e causa tela branca. ' +
+                'Selecione GitHub Actions em https://github.com/' + context.repo.owner + '/' +
+                context.repo.repo + '/settings/pages e execute este workflow novamente.'
+              );
+            }
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
